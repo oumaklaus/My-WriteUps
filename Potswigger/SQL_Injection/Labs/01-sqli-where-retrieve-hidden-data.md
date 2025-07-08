@@ -15,9 +15,10 @@ SELECT * FROM products WHERE cartegory = 'Pets' AND released = 1
 - I inspected the URL and injected a simple SQL payload to manipulate the query.
 - Injected `'--` at the end of the category parameter to comment out the `AND released = 1` clause.
 
-This successfully revealed an unreleased product under the `Pets` category only (*Pet Experience Days ). 
+This successfully revealed an unreleased product under the `Pets` category only (Pet Experience Days).
 
-![Sec](01sec.png)
+
+![Sec](../Assets/01sec.png)
 -  To take it further and view unreleased products across all categories, I injected: `' OR 1=1--` This modified the SQL query to: 
 
 ```sql 

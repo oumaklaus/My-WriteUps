@@ -1,26 +1,23 @@
-## *SQL injection UNION attack, determining the number of columns returned by the query
+# SQL injection UNION attack, determining the number of columns returned by the query
 
 ### Objectives 🎯
 - Determine the number of columns returned by the query by performing a SQL injection UNION attack.
 
 ### Steps Followed To Solve the lab 🤺
 - Navigated to Lifestyle category.
-- Used Burp Suite to intercept the request and used a payload `'+UNION+SELECT+NULL--` to modify the category parameter. This caused an error _(Internal server error).
-
-![First Step](../Assets/first.PNG)
+- Used Burp Suite to intercept the request and used a payload `'+UNION+SELECT+NULL--` to modify the category parameter. This caused an error (Internal server error).
 
 ---
-
-![second step](../Assets/second.PNG)
+![First step](../Assets/first.png)
 
 ---
+---
+![Second](../Assets/second.png)
 
 - Made another request, intercepted it and used an updated payload `'+UNION+SELECT+NULL,NULL--`, which returned the same error.
 - Repeated the process with the payload `'+UNION+SELECT+NULL,NULL,NULL--` which successfully worked, and the **lab was solved**
 
 ![Third Step](../Assets/third.PNG)
-
----
 
 ![Forth Step](../Assets/forth.png)
 
