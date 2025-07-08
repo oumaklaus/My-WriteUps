@@ -17,7 +17,7 @@
 - Made another request, intercepted it and used an updated payload `'+UNION+SELECT+NULL,NULL--`, which returned the same error.
 - Repeated the process with the payload `'+UNION+SELECT+NULL,NULL,NULL--` which successfully worked, and the **lab was solved**
 
-![Third Step](../Assets/third.PNG)
+![Third Step](../Assets/third.png)
 
 ![Forth Step](../Assets/forth.png)
 
